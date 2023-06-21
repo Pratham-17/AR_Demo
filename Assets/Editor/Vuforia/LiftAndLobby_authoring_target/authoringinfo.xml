@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<QCARInfo>
+    <TargetSet version="3.4">
+        <AreaTarget version="5.1" bbox="-12.1586 -1.6053 -41.7779 15.0685 1.2011 3.5921" targetId="7100a6ee34f041fcb63b024785e3a83b" name="LiftAndLobby_authoring_target" pathAuthoring="7100a6ee34f041fcb63b024785e3a83b_authoring.glb" pathOcclusion="7100a6ee34f041fcb63b024785e3a83b_occlusion.3dt" pathNavMesh="7100a6ee34f041fcb63b024785e3a83b_navmesh.glb" cloudTarget="false" />
+    </TargetSet>
+</QCARInfo>

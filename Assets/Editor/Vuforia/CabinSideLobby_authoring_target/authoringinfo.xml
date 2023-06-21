@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<QCARInfo>
+    <TargetSet version="3.4">
+        <AreaTarget version="5.1" bbox="-14.2068 -1.4669 -1.4589 23.9163 1.5672 22.2742" targetId="556db1dfd8fc40b3a664486cee6006a0" name="CabinSideLobby_authoring_target" pathAuthoring="556db1dfd8fc40b3a664486cee6006a0_authoring.glb" pathOcclusion="556db1dfd8fc40b3a664486cee6006a0_occlusion.3dt" pathNavMesh="556db1dfd8fc40b3a664486cee6006a0_navmesh.glb" cloudTarget="false" />
+    </TargetSet>
+</QCARInfo>

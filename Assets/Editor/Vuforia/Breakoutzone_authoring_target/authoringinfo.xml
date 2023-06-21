@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<QCARInfo>
+    <TargetSet version="3.4">
+        <AreaTarget version="5.1" bbox="13.1594 -1.1057 -27.7881 32.3674 1.6862 0.3385" targetId="c8812eadc6d742b0bc2b8fd76ea9d3ee" name="Breakoutzone_authoring_target" pathAuthoring="c8812eadc6d742b0bc2b8fd76ea9d3ee_authoring.glb" pathOcclusion="c8812eadc6d742b0bc2b8fd76ea9d3ee_occlusion.3dt" pathNavMesh="c8812eadc6d742b0bc2b8fd76ea9d3ee_navmesh.glb" cloudTarget="false" />
+    </TargetSet>
+</QCARInfo>
