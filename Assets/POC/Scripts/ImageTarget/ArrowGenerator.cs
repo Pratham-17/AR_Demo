@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ArrowGenerator : MonoBehaviour
 {
-    [SerializeField] List<Arrow> arrows;
+     public List<Arrow> arrows;
     [SerializeField] bool looping = false;
     // Start is called before the first frame update
     IEnumerator Start()
