@@ -11,7 +11,7 @@ public class SceneSelection : MonoBehaviour
     static string ImageTraget = "Image Traget";
     static string Measurement = "Real world measurement";
 
-    [SerializeField] List<string> listofScenes = new List<string>() { ModelTraget,ImageTraget,Measurement };
+    [SerializeField] List<string> listofScenes;
 
     public TMP_Dropdown sceneSelection;
     public TMP_Text loadingText;
@@ -23,6 +23,8 @@ public class SceneSelection : MonoBehaviour
     {
         // Empty all the options before starting it.
         sceneSelection.ClearOptions();
+
+        listofScenes = new List<string>() { ModelTraget, ImageTraget, Measurement };
 
 #if UNITY_IOS
         listofScenes.Add(Navigation);
