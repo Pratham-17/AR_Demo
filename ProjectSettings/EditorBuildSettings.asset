@@ -5,14 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/POC/Scenes/AreaTargetMaster.unity
-    guid: 9a9d46184e0462546a8669f9164c9b61
+  - enabled: 1
+    path: Assets/POC/Scenes/SceneSelector.unity
+    guid: 7a9c50ab96d2ade4a9d24b60488de82b
   - enabled: 1
     path: Assets/POC/Scenes/ImageTarget.unity
     guid: d13d0b27ba87ea3459367538bf86057c
+  - enabled: 1
+    path: Assets/POC/Scenes/ModelTarget.unity
+    guid: 612a16310e13d8a4a88a3e98856bd602
+  - enabled: 1
+    path: Assets/POC/Scenes/ARMeasurement.unity
+    guid: bc3d838f06cd67a428e1c5a95818cf07
+  - enabled: 1
+    path: Assets/POC/Scenes/AreaTargetMaster.unity
+    guid: 9a9d46184e0462546a8669f9164c9b61
   m_configObjects:
-    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 555f97d64697124449af895e3641505e, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 61595808395a64e46bccc037a6f4f150, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 62e27fd0e6a56d041b3ab557526e6cba, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b95da58bb718e22449c93bc05e303492, type: 2}
