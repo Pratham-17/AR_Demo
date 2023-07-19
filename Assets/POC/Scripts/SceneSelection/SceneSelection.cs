@@ -6,11 +6,6 @@ using TMPro;
 
 public class SceneSelection : MonoBehaviour
 {
-    static string Navigation = "Navigation";
-    static string ModelTraget = "Model Traget";
-    static string ImageTraget = "Image Traget";
-    static string Measurement = "Real world measurement";
-
     [SerializeField] List<string> listofScenes;
 
     public TMP_Dropdown sceneSelection;
@@ -24,10 +19,13 @@ public class SceneSelection : MonoBehaviour
         // Empty all the options before starting it.
         sceneSelection.ClearOptions();
 
-        listofScenes = new List<string>() { ModelTraget, ImageTraget, Measurement };
+        listofScenes = new List<string>() {GenericVariables.DP_DefaultName,
+                                            GenericVariables.DP_ImageTargetName, 
+                                            GenericVariables.DP_ModelTargetName, 
+                                            GenericVariables.DP_MeasurementName};
 
 #if UNITY_IOS
-        listofScenes.Add(Navigation);
+        listofScenes.Add(GenericVariables.DP_NavigationName);
 #endif
 
         foreach (string scene in listofScenes)
@@ -48,7 +46,25 @@ public class SceneSelection : MonoBehaviour
         yield return new WaitForSeconds(1f);
         //Show loading text/screen.
         loadingText.enabled = true;
-        AsyncOperation loadScene = SceneManager.LoadSceneAsync(sceneName);
+
+        AsyncOperation loadScene;
+
+        switch (sceneName)
+        {
+            case GenericVariables.DP_ImageTargetName:
+                loadScene = SceneManager.LoadSceneAsync(GenericVariables.ImageTraget_Scene);
+                break;
+            case GenericVariables.DP_MeasurementName:
+                loadScene = SceneManager.LoadSceneAsync(GenericVariables.Measurement_Scene);
+                break;
+            case GenericVariables.DP_NavigationName:
+                loadScene = SceneManager.LoadSceneAsync(GenericVariables.Navigation_Scene);
+                break;
+            default:
+                loadScene = SceneManager.LoadSceneAsync(GenericVariables.ModelTraget_Scene);
+                break;
+        }
+         
         while(!loadScene.isDone) yield return null;
 
         loadScene.completed += (value) => { loadingText.enabled = false; };
