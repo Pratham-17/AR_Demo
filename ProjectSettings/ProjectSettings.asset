@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 23
-  productGUID: 2cc35e20d691b8646b16399b60fdefef
+  productGUID: 00000000000000000000000000000000
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -62,7 +62,7 @@ PlayerSettings:
   allowedAutorotateToLandscapeLeft: 1
   useOSAutorotation: 1
   use32BitDisplayBuffer: 1
-  preserveFramebufferAlpha: 1
+  preserveFramebufferAlpha: 0
   disableDepthAndStencilBuffers: 0
   androidStartInFullscreen: 1
   androidRenderOutsideSafeArea: 1
@@ -134,7 +134,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.1
+  bundleVersion: 10.16.5
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -158,13 +158,13 @@ PlayerSettings:
     Android: com.vuforia.engine.vfxlibrary
     Lumin: com.PTCIncom.vuforia.engine.vfxlibrary
     Standalone: com.vuforia.engine.vfxlibrary
-    iPhone: com.Prathamesh.DemoAR
+    iPhone: com.vuforia.engine.vfxlibrary
   buildNumber:
     Standalone: 0
     iPhone: 0
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
-  AndroidBundleVersionCode: 10163
+  AndroidBundleVersionCode: 10165
   AndroidMinSdkVersion: 26
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -233,12 +233,12 @@ PlayerSettings:
   tvOSManualSigningProvisioningProfileID: 
   iOSManualSigningProvisioningProfileType: 0
   tvOSManualSigningProvisioningProfileType: 0
-  appleEnableAutomaticSigning: 1
+  appleEnableAutomaticSigning: 0
   iOSRequireARKit: 0
   iOSAutomaticallyDetectAndAddCapabilities: 1
   appleEnableProMotion: 0
   shaderPrecisionModel: 0
-  clonedFromGUID: cd9accd4e9aa345419dbf1593779cc97
+  clonedFromGUID: 50f76b26490a049739131c8fba7d63c2
   templatePackageId: 
   templateDefaultScene: 
   useCustomMainManifest: 0
@@ -507,6 +507,7 @@ PlayerSettings:
       m_Kind: 2
       m_SubKind: iPad
   m_BuildTargetBatching: []
+  m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs: []
   m_BuildTargetGraphicsJobMode: []
   m_BuildTargetGraphicsAPIs:
@@ -514,6 +515,8 @@ PlayerSettings:
     m_APIs: 0b00000008000000
     m_Automatic: 0
   m_BuildTargetVRSettings: []
+  m_DefaultShaderChunkSizeInMB: 16
+  m_DefaultShaderChunkCount: 0
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
@@ -674,6 +677,7 @@ PlayerSettings:
   switchNetworkInterfaceManagerInitializeEnabled: 1
   switchPlayerConnectionEnabled: 1
   switchUseNewStyleFilepaths: 0
+  switchUseLegacyFmodPriorities: 1
   switchUseMicroSleepForYield: 1
   switchEnableRamDiskSupport: 0
   switchMicroSleepForYieldTime: 25
@@ -773,10 +777,11 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
+  webGLPowerPreference: 2
   scriptingDefineSymbols:
     Android: VUFORIA_ANDROID_SETTINGS
     Windows Store Apps: VUFORIA_WSA_SETTINGS
-    iPhone: VUFORIA_IOS_SETTINGS;UNITY_XR_ARKIT_LOADER_ENABLED
+    iPhone: VUFORIA_IOS_SETTINGS
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
@@ -788,6 +793,7 @@ PlayerSettings:
   allowUnsafeCode: 0
   useDeterministicCompilation: 1
   enableRoslynAnalyzers: 1
+  selectedPlatform: 0
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 1
@@ -797,7 +803,7 @@ PlayerSettings:
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: VuX
-  metroPackageVersion: 10.16.3.0
+  metroPackageVersion: 10.16.5.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -805,7 +811,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: VuX
   wsaImages: {}
-  metroTileShortName: VW_AR_POC
+  metroTileShortName: 
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
@@ -865,10 +871,11 @@ PlayerSettings:
     m_SignPackage: 1
   luminIsChannelApp: 0
   luminVersion:
-    m_VersionCode: 10163
-    m_VersionName: 10.16.3
+    m_VersionCode: 10165
+    m_VersionName: 10.16.5
   apiCompatibilityLevel: 6
-  activeInputHandler: 2
+  activeInputHandler: 0
+  windowsGamepadBackendHint: 0
   cloudProjectId: 
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
