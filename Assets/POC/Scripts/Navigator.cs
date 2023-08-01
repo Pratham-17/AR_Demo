@@ -25,6 +25,8 @@ public class Navigator : MonoBehaviour
 
     string CurrentDestination = string.Empty;
 
+    float offset = 0.6f;
+
     private void Start()
     {
         CurrentDestination = "None";
@@ -39,11 +41,11 @@ public class Navigator : MonoBehaviour
         CurrentDestination = dropdown.options[dropdown.value].text;
         if (CurrentDestination != "None")
         {
-            locationPin.transform.position = GetDestinationPosition(CurrentDestination).position;
+            locationPin.transform.position = GetDestinationPosition(CurrentDestination).position + new Vector3(0.0f, offset, 0.0f);
             path.enabled = true;
             locationPin.SetActive(true);
             locationPin.transform.DORotate(new Vector3(0, 360, 0), 3, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Restart).SetRelative().SetEase(Ease.Linear);
-            locationPin.transform.DOMoveY(-1, 1, false).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
+            locationPin.transform.DOMoveY(0.1f, 1, false).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
         }
 
     }
@@ -79,7 +81,7 @@ public class Navigator : MonoBehaviour
         for (int i = 0; i < agent.path.corners.Length; i++)
         {
             Vector3 pointPosition = new Vector3(agent.path.corners[i].x,
-                                                agent.path.corners[i].y,
+                                                agent.path.corners[i].y + offset,
                                                 agent.path.corners[i].z);
             path.SetPosition(i, pointPosition);
 
