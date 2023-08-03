@@ -41,7 +41,7 @@ public class Navigator : MonoBehaviour
         CurrentDestination = dropdown.options[dropdown.value].text;
         if (CurrentDestination != "None")
         {
-            locationPin.transform.position = GetDestinationPosition(CurrentDestination).position + new Vector3(0.0f, offset, 0.0f);
+            locationPin.transform.position = GetDestinationTransform(CurrentDestination).position + new Vector3(0.0f, offset, 0.0f);
             path.enabled = true;
             locationPin.SetActive(true);
             locationPin.transform.DORotate(new Vector3(0, 360, 0), 3, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Restart).SetRelative().SetEase(Ease.Linear);
@@ -54,7 +54,7 @@ public class Navigator : MonoBehaviour
     {
         if (CurrentDestination != "None")
         {
-            agent.SetDestination(GetDestinationPosition(CurrentDestination).position);
+            agent.SetDestination(GetDestinationTransform(CurrentDestination).position);
             if (agent.hasPath)
             {
                 DrawPath();
@@ -89,13 +89,13 @@ public class Navigator : MonoBehaviour
 
 
     }
-    Transform GetDestinationPosition(string name)
+    Transform GetDestinationTransform(string name)
     {
         for(int i=0; i<=destinations.Count;i++)
         {
             if(destinations[i].Name == name)
             {
-                return destinations[i].Position;
+                return destinations[i].DestTransform;
             }
         }
         return null;
@@ -105,7 +105,7 @@ public class Navigator : MonoBehaviour
     class Destination
     {
         [SerializeField]
-        public Transform Position;
+        public Transform DestTransform;
 
         [SerializeField]
         public string Name;
